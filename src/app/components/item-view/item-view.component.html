@@ -1,0 +1,16 @@
+<div class="card text-center">
+    <div class="card-header">
+     Cart Item Details
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{item.quantity}}</p>
+      <p class="card-text">{{item.price}}</p>
+      <a (click)="gotoItemList()" class="btn btn-primary">Go back to Items</a>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+

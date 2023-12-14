@@ -1,0 +1,36 @@
+<button  (click)="addProduct()" type="button" class="btn btn-primary">Add Product</button>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Image</th>
+        <th scope="col">Description</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prd of products">
+        <th scope="row">{{prd.id}}</th>
+        <td>{{prd.name}}</td>
+        <td><img src="{{prd.url}}" height="50px" width="100px"/></td>
+        <td>{{prd.description}}</td>
+        <td>{{prd.quantity}}</td>
+        <td>{{prd.price}}</td>
+        <td>
+          <button (click)="updateProduct(prd.id)" type="button" class="btn btn-success">Update</button> &nbsp;
+          <button (click)="viewProduct(prd.id)" type="button" class="btn btn-danger">View</button> &nbsp;
+          <button (click)="deleteProduct(prd.id)" type="button" class="btn btn-warning">Delete</button> &nbsp;
+
+
+        </td>
+      </tr>
+   
+    </tbody>
+  </table>
+
+<a routerLink="/home" type="button" class="btn btn-primary">Back to Home</a>
+

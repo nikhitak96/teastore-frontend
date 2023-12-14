@@ -1,0 +1,19 @@
+<div class="card text-center">
+    <div class="card-header">
+     TeaProduct Details
+    </div>
+    <div class="card-body">
+      <img class="img-fluid" src="{{product.url}}" alt="" height="100px" width="100px">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">{{product.description}}</p>
+      <p class="card-text">{{product.quantity}}</p>
+      <p class="card-text">{{product.price}}</p>
+      <a (click)="gotoProductList()" class="btn btn-primary">Go back to Products</a>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+
+

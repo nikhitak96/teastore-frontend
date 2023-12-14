@@ -1,0 +1,33 @@
+<form (ngSubmit)="save(data.value)" #data="ngForm">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Product Name</label>
+      <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" ngModel>
+    </div>
+
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Description</label>
+      <input type="text" class="form-control" id="description" name="description" ngModel>
+    </div>
+
+    
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Quantity</label>
+        <input type="number" class="form-control" id="quantity" name="quantity" aria-describedby="emailHelp" ngModel>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Price</label>
+        <input type="number" class="form-control" id="price" name="price" aria-describedby="emailHelp" ngModel>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Image</label>
+        <input type="file"  class="form-control"  accept="image/*" name="image"(change)="handleFileInput($event)" ngModel>
+      </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>&nbsp;
+    <button type="reset" class="btn btn-primary">Reset</button>
+  </form>
+

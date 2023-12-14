@@ -1,0 +1,30 @@
+<button  (click)="addItem()" type="button" class="btn btn-primary">Add Item</button>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let itm of items">
+        <th scope="row">{{itm.id}}</th>
+        <td>{{itm.name}}</td>
+        <td>{{itm.quantity}}</td>
+        <td>{{itm.price}}</td>
+        <td>
+          <button (click)="updateItem(itm.id)" type="button" class="btn btn-success">edit</button> &nbsp;
+          <button (click)="deleteItem(itm.id)" type="button" class="btn btn-warning">Delete</button> &nbsp;
+
+
+        </td>
+      </tr>
+   
+    </tbody>
+  </table>
+
+<a routerLink="/home" type="button" class="btn btn-primary">checkout</a>

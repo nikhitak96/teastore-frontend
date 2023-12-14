@@ -1,0 +1,37 @@
+ <!-- Navbar Start -->
+ <div class="container-fluid bg-white sticky-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
+            <a routerLink="index.html" class="navbar-brand">
+                <img class="img-fluid" src="assets/img/logo.png" alt="Logo">
+            </a>
+            <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a routerLink="home" class="nav-item nav-link active">Home</a>
+                    <a routerLink="about" class="nav-item nav-link">About</a>
+                    
+                    <a routerLink="store" class="nav-item nav-link">Store</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu bg-light rounded-0 m-0">
+                            <a routerLink="teaproduct" class="dropdown-item">tea cart</a>
+                            <a routerLink="features" class="dropdown-item">Features</a>
+                            <a routerLink="blog-article" class="dropdown-item">Blog Article</a>
+                        </div>
+                    </div>
+                    
+                    <a routerLink="contact" class="nav-item nav-link">Contact</a>
+                   <a routerLink="Signup"   class="nav-item nav-link">Signup</a>
+                   <a routerLink="login"   *ngIf="!(userService.isLoggedIn | async)" class="nav-item nav-link">login</a>
+                   <a   *ngIf="(userService.isLoggedIn | async)"  class="nav-item nav-link" (click)="logout()">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
+<router-outlet></router-outlet>
+
